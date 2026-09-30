@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-history"
+version = "0.1.0"
+description = "Log every Claude Code and Codex session to a local sqlite table so it can be found and resumed later."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+agent-history = "agent_history.cli:main"
+
+[project.urls]
+Repository = "https://github.com/hjoncour/agent-history"
+
+[tool.setuptools.package-data]
+agent_history = ["skills/*/SKILL.md"]
